@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/navigation_dashboard"
+        android:title="Home"
+        android:icon="@drawable/image_dashboard" />
+    <item
+        android:id="@+id/navigation_list_check"
+        android:title="Dashboard"
+        android:icon="@drawable/image_list_check" />
+    <item
+        android:id="@+id/navigation_priority"
+        android:title="Notifications"
+        android:icon="@drawable/image_priority" />
+
+    <item
+        android:id="@+id/navigation_calendar"
+        android:title="Calendar"
+        android:icon="@drawable/image_calendar_filled" />
+
+</menu>

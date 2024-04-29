@@ -1,0 +1,447 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/container_android_large_dark"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CreateNewTaskFragment">
+
+
+    <TextView
+            android:id="@+id/header_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Create New Task"
+            android:layout_marginTop="15dp"
+            android:textSize="22sp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:textColor="@color/cardview_light_background"/>
+
+    <ImageView
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:src="@drawable/vector_back"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/header_tv"
+        app:layout_constraintBottom_toBottomOf="@id/header_tv"
+        app:layout_constraintEnd_toStartOf="@+id/header_tv"/>
+
+    <TextView
+        android:id="@+id/selectDate_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Select the date"
+        android:textSize="15sp"
+        android:textColor="@color/cardview_light_background"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="15dp"
+        app:layout_constraintTop_toBottomOf="@id/header_tv"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <FrameLayout
+        android:id="@+id/calendar_containers"
+        android:layout_width="match_parent"
+        android:layout_height="220dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        app:layout_constraintTop_toBottomOf="@+id/selectDate_tv"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:background="@drawable/bg"/>
+
+
+        <TextView
+            android:id="@+id/date_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="20th March,2024"
+            android:layout_marginTop="10dp"
+            app:layout_constraintTop_toTopOf="@id/calendar_containers"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:textColor="@color/cardview_light_background"
+            android:layout_gravity="center_horizontal"/>
+
+        <TextView
+            android:id="@+id/from_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="From"
+            android:textColor="#94A3B8"
+            app:layout_constraintTop_toBottomOf="@+id/date_tv"
+            app:layout_constraintStart_toStartOf="@id/calendar_containers"
+            android:layout_marginStart="15dp"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/calendarBefore_rv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            tools:listitem="@layout/date_layout"
+            android:layout_marginTop="5dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintTop_toBottomOf="@id/from_tv"
+            app:layout_constraintStart_toStartOf="@+id/calendar_containers"
+            app:layout_constraintEnd_toEndOf="@+id/calendar_containers"
+            />
+
+    <TextView
+        android:id="@+id/to_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="To"
+        android:textColor="#94A3B8"
+        app:layout_constraintTop_toBottomOf="@+id/calendarBefore_rv"
+        app:layout_constraintStart_toStartOf="@id/calendar_containers"
+        android:layout_marginStart="15dp"/>
+
+    <ImageView
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:src="@drawable/down_vector"
+        app:layout_constraintStart_toEndOf="@id/to_tv"
+        app:layout_constraintTop_toBottomOf="@id/calendarBefore_rv"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/calendarAfter_rv"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/calendarAfter_rv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        tools:listitem="@layout/date_layout"
+        android:layout_marginTop="5dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintTop_toBottomOf="@id/to_tv"
+        app:layout_constraintStart_toStartOf="@+id/calendar_containers"
+        app:layout_constraintEnd_toEndOf="@+id/calendar_containers"
+        />
+
+    <TextView
+        android:id="@+id/selectTime_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Select time"
+        android:textSize="15sp"
+        android:textColor="@color/cardview_light_background"
+        android:layout_marginTop="5dp"
+        android:layout_marginStart="25dp"
+        app:layout_constraintTop_toBottomOf="@+id/calendar_containers"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <FrameLayout
+        android:id="@+id/time_container"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        app:layout_constraintTop_toBottomOf="@+id/selectTime_tv"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:background="@drawable/bg"/>
+
+    <TextView
+        android:id="@+id/fromTime_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="From"
+        android:textColor="#94A3B8"
+        app:layout_constraintTop_toTopOf="@+id/time_container"
+        app:layout_constraintStart_toStartOf="@id/time_container"
+        android:layout_marginTop="6dp"
+        android:layout_marginStart="40dp"/>
+
+    <LinearLayout
+        android:id="@+id/startTimer_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="110dp"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toStartOf="@+id/fromTime_tv"
+        app:layout_constraintTop_toTopOf="@id/fromTime_tv"
+        app:layout_constraintBottom_toBottomOf="@id/time_container"
+        app:layout_constraintEnd_toEndOf="@id/fromTime_tv">
+
+
+        <com.shawnlin.numberpicker.NumberPicker
+            android:id="@+id/NumPickerHours"
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+
+            app:np_width="64dp"
+            app:np_height="180dp"
+            app:np_dividerColor="@color/Transparent"
+            app:np_formatter="@string/number_picker_formatter"
+            app:np_max="23"
+            app:np_min="0"
+            app:np_wheelItemCount="1"
+            app:np_selectedTextColor="@color/white"
+            app:np_selectedTextSize="20sp"
+            app:np_textColor="@color/white"
+            app:np_textSize="20sp"
+            app:np_value="12" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="."
+            android:textSize="18dp"
+            android:textColor="@color/white"
+            android:layout_gravity="center_vertical"
+          />
+
+        <com.shawnlin.numberpicker.NumberPicker
+            android:id="@+id/NumPickerMinute"
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            app:np_width="64dp"
+            app:np_height="180dp"
+            app:np_dividerColor="@color/Transparent"
+            app:np_formatter="@string/number_picker_formatter"
+            app:np_max="59"
+            app:np_min="0"
+            app:np_wheelItemCount="1"
+            app:np_selectedTextColor="@color/white"
+            app:np_selectedTextSize="20sp"
+            app:np_textColor="@color/white"
+            app:np_textSize="20sp"
+            app:np_value="00" />
+    </LinearLayout>
+
+
+    <ImageView
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:src="@drawable/right_arrow"
+        app:layout_constraintStart_toEndOf="@id/startTimer_layout"
+        app:layout_constraintTop_toTopOf="@id/startTimer_layout"
+        app:layout_constraintEnd_toStartOf="@id/endTimer_layout"
+        app:layout_constraintBottom_toBottomOf="@+id/startTimer_layout"/>
+
+
+
+    <TextView
+        android:id="@+id/ToTime_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="To"
+        android:textColor="#94A3B8"
+        app:layout_constraintTop_toTopOf="@+id/time_container"
+        app:layout_constraintEnd_toEndOf="@+id/time_container"
+        android:layout_marginTop="6dp"
+        android:layout_marginEnd="50dp"/>
+
+    <LinearLayout
+        android:id="@+id/endTimer_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="110dp"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toStartOf="@+id/ToTime_tv"
+        app:layout_constraintTop_toTopOf="@id/ToTime_tv"
+        app:layout_constraintBottom_toBottomOf="@id/time_container"
+        app:layout_constraintEnd_toEndOf="@id/ToTime_tv">
+
+
+        <com.shawnlin.numberpicker.NumberPicker
+            android:id="@+id/NumPickerHoursEnd"
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            app:np_width="64dp"
+            app:np_height="180dp"
+            app:np_dividerColor="@color/Transparent"
+            app:np_formatter="@string/number_picker_formatter"
+            app:np_max="23"
+            app:np_min="0"
+            app:np_wheelItemCount="1"
+            app:np_selectedTextColor="@color/white"
+            app:np_selectedTextSize="20sp"
+            app:np_textColor="@color/white"
+            app:np_textSize="20sp"
+            app:np_value="12" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="."
+            android:textSize="18dp"
+            android:textColor="@color/white"
+            android:layout_gravity="center_vertical"
+            />
+
+        <com.shawnlin.numberpicker.NumberPicker
+            android:id="@+id/NumPickerMinuteEnd"
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            app:np_width="64dp"
+            app:np_height="180dp"
+            app:np_dividerColor="@color/Transparent"
+            app:np_formatter="@string/number_picker_formatter"
+            app:np_max="59"
+            app:np_min="0"
+            app:np_wheelItemCount="1"
+            app:np_selectedTextColor="@color/white"
+            app:np_selectedTextSize="20sp"
+            app:np_textColor="@color/white"
+            app:np_textSize="20sp"
+            app:np_value="00" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/Priority_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Priority"
+        android:textSize="15sp"
+        android:textColor="@color/cardview_light_background"
+        android:layout_marginTop="5dp"
+        android:layout_marginStart="25dp"
+        app:layout_constraintTop_toBottomOf="@+id/time_container"
+        app:layout_constraintStart_toStartOf="parent"/>
+    
+    <LinearLayout
+        android:id="@+id/priority_layout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        app:layout_constraintTop_toBottomOf="@id/Priority_tv"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:gravity="center"
+        >
+
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="40dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/high"
+            android:layout_margin="8dp"
+
+            />
+
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="40dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/medim"
+            android:layout_margin="8dp"
+
+            />
+
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="40dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/low"
+            android:layout_margin="8dp"
+            />
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/titleHeader_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Title Task"
+        android:textSize="15sp"
+        android:textColor="@color/cardview_light_background"
+        android:layout_marginTop="5dp"
+        android:layout_marginStart="25dp"
+        app:layout_constraintTop_toBottomOf="@+id/priority_layout"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+
+    <FrameLayout
+        android:id="@+id/title_task_container"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        app:layout_constraintTop_toBottomOf="@+id/titleHeader_tv"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:background="@drawable/bg"/>
+
+    <EditText
+        android:id="@+id/Title_editText"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@null"
+        android:padding="10dp"
+        android:text="Sistem Programlama"
+        android:textSize="13sp"
+        android:textColor="@color/white"
+        app:layout_constraintTop_toTopOf="@id/title_task_container"
+        app:layout_constraintBottom_toBottomOf="@id/title_task_container"
+        app:layout_constraintStart_toStartOf="@id/title_task_container"
+        app:layout_constraintEnd_toEndOf="@id/title_task_container"/>
+
+
+    <TextView
+        android:id="@+id/NoteHeader_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Note"
+        android:textSize="15sp"
+        android:textColor="@color/cardview_light_background"
+        android:layout_marginTop="5dp"
+        android:layout_marginStart="25dp"
+        app:layout_constraintTop_toBottomOf="@+id/title_task_container"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+
+    <FrameLayout
+        android:id="@+id/Note_Container"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        app:layout_constraintTop_toBottomOf="@+id/NoteHeader_tv"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:background="@drawable/bg"/>
+
+    <EditText
+        android:id="@+id/Note_EditText"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@null"
+        android:padding="10dp"
+        android:text="Sistem Programlama 22.04 tarihinde şu konular ile ilgili konular çıkacaktır -> \n 1- ders \n 2-C# \n 3-frts "
+        android:scrollbars="vertical"
+        android:textSize="13sp"
+        android:textColor="@color/white"
+        android:gravity="top|start"
+        app:layout_constraintTop_toTopOf="@id/Note_Container"
+        app:layout_constraintBottom_toBottomOf="@id/Note_Container"
+        app:layout_constraintStart_toStartOf="@id/Note_Container"
+        app:layout_constraintEnd_toEndOf="@id/Note_Container"/>
+
+
+    <Button
+        android:id="@+id/start_btn"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:text="start"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,316 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    >
+
+    <ImageView
+        android:id="@+id/priority_image3"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:background="@drawable/priority_image3"
+        android:scaleType="centerCrop"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/iv_options"
+        android:layout_width="16.51dp"
+        android:layout_height="16.51dp"
+        android:layout_marginEnd="15.14dp"
+        android:layout_marginTop="12.39dp"
+        android:scaleType="centerInside"
+        android:src="@drawable/more_image2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/member_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="left|top"
+        android:layout_marginLeft="99dp"
+        android:layout_marginTop="116.97dp"
+        android:layout_marginRight="9dp"
+        android:layout_marginBottom="14dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <FrameLayout
+            android:id="@+id/pin_container5"
+            android:layout_width="19.33dp"
+            android:layout_height="19.03dp">
+
+            <ImageView
+                android:id="@+id/rectangle_image21"
+                android:layout_width="19.33dp"
+                android:layout_height="19.03dp"
+                android:background="@drawable/rectangle_image21"
+                android:scaleType="centerInside" />
+
+            <ImageView
+                android:id="@+id/mask_group5"
+                android:layout_width="17dp"
+                android:layout_height="16.73dp"
+                android:layout_gravity="top|left"
+                android:layout_marginLeft="1.14dp"
+                android:layout_marginTop="1.14dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/mask_group5" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/pin_container6"
+            android:layout_width="19.33dp"
+            android:layout_height="19.03dp"
+            android:layout_marginLeft="-8dp">
+
+            <ImageView
+                android:id="@+id/rectangle_image24"
+                android:layout_width="19.33dp"
+                android:layout_height="19.03dp"
+                android:background="@drawable/rectangle_image24"
+                android:scaleType="centerInside" />
+
+            <ImageView
+                android:id="@+id/mask_group6"
+                android:layout_width="16.89dp"
+                android:layout_height="16.9dp"
+                android:layout_gravity="top|right"
+                android:layout_marginTop="1.07dp"
+                android:layout_marginRight="1.18dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/mask_group6" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/pin_container7"
+            android:layout_width="19.33dp"
+            android:layout_height="19.03dp"
+            android:layout_marginLeft="-8dp">
+
+            <ImageView
+                android:id="@+id/rectangle_image27"
+                android:layout_width="19.33dp"
+                android:layout_height="19.03dp"
+                android:background="@drawable/rectangle_image27"
+                android:scaleType="centerInside" />
+
+            <ImageView
+                android:id="@+id/mask_group7"
+                android:layout_width="16.89dp"
+                android:layout_height="16.9dp"
+                android:layout_marginLeft="0.05dp"
+                android:layout_marginTop="1.07dp"
+                android:layout_marginRight="1.18dp"
+                android:layout_marginBottom="0dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/mask_group7" />
+        </FrameLayout>
+        <!-- Üye resimleri buraya gelecek (Bitti) -->
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/progress_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|left"
+        android:layout_marginLeft="14dp"
+        android:layout_marginBottom="17dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <ImageView
+            android:id="@+id/rectangle_image30"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_gravity="top"
+            android:background="@drawable/rectangle_image30"
+            android:scaleType="centerCrop" />
+
+        <ImageView
+            android:id="@+id/rectangle_image31"
+            android:layout_width="37.5dp"
+            android:layout_height="2dp"
+            android:layout_gravity="top|left"
+            android:background="@drawable/rectangle_image31"
+            android:scaleType="centerInside" />
+
+        <FrameLayout
+            android:id="@+id/progress_layer2"
+            android:layout_width="68.77dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="left"
+            android:layout_marginLeft="2.52dp"
+            android:layout_marginTop="2.5dp">
+
+            <TextView
+                android:id="@+id/progress_text2"
+                android:layout_width="wrap_content"
+                android:layout_height="8dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginTop="-1dp"
+                android:layout_marginBottom="-1dp"
+                android:gravity="right|center_vertical"
+                android:includeFontPadding="false"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:text="Progress :"
+                android:textColor="#FFFFFFFF"
+                android:textSize="5dp" />
+
+            <TextView
+                android:id="@+id/fraction_text1"
+                android:layout_width="match_parent"
+                android:layout_height="8dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="60.77dp"
+                android:layout_marginTop="-1dp"
+                android:layout_marginRight="0dp"
+                android:layout_marginBottom="-1dp"
+                android:gravity="right|center_vertical"
+                android:includeFontPadding="false"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:text="1/2"
+                android:textColor="#FFFFFFFF"
+                android:textSize="5dp" />
+        </FrameLayout>
+
+        <!-- İlerleme çubuğu ve metinler buraya gelecek(Bitti)-->
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/high_flag_task"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="62dp"
+        android:layout_marginTop="79dp"
+        android:layout_marginEnd="55dp"
+        android:layout_marginBottom="63dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/flag_icon1"
+            android:layout_width="8dp"
+            android:layout_height="8dp"
+            android:layout_gravity="left"
+            android:scaleType="centerInside"
+            android:src="@drawable/flag_icon1" />
+
+        <TextView
+            android:id="@+id/high_priority_text"
+            android:layout_width="match_parent"
+            android:layout_height="7dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="2.5dp"
+            android:layout_marginBottom="-1.5dp"
+            android:gravity="left|center_vertical"
+            android:includeFontPadding="false"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:text="(Medium Priority)"
+            android:textColor="#FFFFFFFF"
+            android:textSize="4dp" />
+
+        <!-- Yüksek öncelik işareti ve metin buraya gelecek -->
+
+    </FrameLayout>
+
+    <LinearLayout
+        android:id="@+id/text_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingTop="1dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="9dp"
+        android:layout_marginBottom="41dp"
+        android:clipToPadding="false"
+        android:gravity="left|top"
+        app:layout_constraintTop_toBottomOf="@+id/iv_options"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        >
+
+        <TextView
+            android:id="@+id/tasks_text2"
+            android:layout_width="wrap_content"
+            android:layout_height="9dp"
+            android:layout_marginTop="-1dp"
+            android:layout_marginBottom="-1dp"
+            android:gravity="left|center_vertical"
+            android:includeFontPadding="false"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:text="2  Tasks"
+            android:textColor="#FFE0E0E0"
+            android:textSize="6dp" />
+
+        <TextView
+            android:id="@+id/mobile_app_design_text2"
+            android:layout_width="131dp"
+            android:layout_height="36dp"
+            android:layout_marginTop="4dp"
+            android:gravity="left|top"
+            android:includeFontPadding="false"
+            android:lineHeight="17.92dp"
+            android:text="Mobile App Design"
+            android:textColor="#FFFFFFFF"
+            android:textSize="16dp" />
+
+        <TextView
+            android:id="@+id/mobile_app_design_text3"
+            android:layout_width="125dp"
+            android:layout_height="14dp"
+            android:layout_marginTop="4dp"
+            android:gravity="left|top"
+            android:includeFontPadding="false"
+            android:lineHeight="6.72dp"
+            android:text="Make design mobile app for e-commerce in with mockup and prototype project."
+            android:textColor="#FFFFFFFF"
+            android:textSize="6dp" />
+        <!-- Metinler buraya gelecek -->
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/icon_container"
+        android:layout_width="20dp"
+        android:layout_height="22.22dp"
+        android:layout_gravity="top|left"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="14dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <ImageView
+            android:id="@+id/rectangle_image32"
+            android:layout_width="20dp"
+            android:layout_height="22.22dp"
+            android:background="@drawable/rectangle_image32"
+            android:scaleType="centerInside" />
+
+        <ImageView
+            android:id="@+id/phone_image2"
+            android:layout_width="15.56dp"
+            android:layout_height="15.56dp"
+            android:layout_marginLeft="2.22dp"
+            android:layout_marginTop="3.33dp"
+            android:layout_marginRight="2.22dp"
+            android:layout_marginBottom="3.33dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/phone_image2" />
+        <!-- İkonlar buraya gelecek -->
+
+    </FrameLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

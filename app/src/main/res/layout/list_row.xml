@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="75dp"
+    android:background="@android:color/transparent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/drawable_shape_7"
+            android:scaleType="centerCrop" />
+
+        <FrameLayout
+            android:id="@+id/near_line"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:layout_gravity="top"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginLeft="289dp"
+            android:layout_marginRight="6dp">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/drawable_image_7" />
+        </FrameLayout>
+
+        <LinearLayout
+            android:id="@+id/main_line"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_gravity="left"
+            android:layout_marginLeft="18dp"
+            android:layout_marginTop="7.5dp"
+            android:layout_marginBottom="0.5dp"
+            android:clipToPadding="false"
+            android:gravity="left|center_vertical"
+            android:orientation="vertical"
+            android:paddingTop="1.5dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:layout_marginTop="-1.5dp"
+                android:layout_marginBottom="-1.5dp"
+                android:gravity="right|center_vertical"
+                android:includeFontPadding="false"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:text="Client Meeting"
+                android:textColor="#FFFFFFFF"
+                android:textSize="15dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="11dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginBottom="-1dp"
+                android:gravity="right|center_vertical"
+                android:includeFontPadding="false"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:text="Review design and fiture."
+                android:textColor="#FFFFFFFF"
+                android:textSize="8dp" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:layout_marginBottom="-1dp"
+                android:clipToPadding="false"
+                android:gravity="left|center_vertical"
+                android:orientation="horizontal"
+                android:paddingTop="1dp"
+                android:paddingBottom="1dp">
+
+                <ImageView
+                    android:layout_width="12dp"
+                    android:layout_height="12dp"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/drawable_image_8" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="11dp"
+                    android:layout_marginLeft="1dp"
+                    android:layout_marginBottom="-1dp"
+                    android:gravity="right|center_vertical"
+                    android:includeFontPadding="false"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    android:text="Sun, 11 Aug 2024 "
+                    android:textColor="#FFFFFFFF"
+                    android:textSize="8dp" />
+
+                <ImageView
+                    android:layout_width="12dp"
+                    android:layout_height="12dp"
+                    android:layout_marginLeft="10dp"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/drawable_image_9" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="11dp"
+                    android:layout_marginLeft="1dp"
+                    android:layout_marginBottom="-1dp"
+                    android:gravity="right|center_vertical"
+                    android:includeFontPadding="false"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    android:text="09.00 am - 12.00 pm"
+                    android:textColor="#FFFFFFFF"
+                    android:textSize="8dp" />
+            </LinearLayout>
+        </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
